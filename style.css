@@ -1,0 +1,314 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden; /* Clear floats */
+    padding: 20px 0;
+}
+
+/* Header Styles */
+header {
+    background: #2c3e50;
+    color: #fff;
+    /* We are removing the padding from the header itself */
+    padding: 0; 
+    border-bottom: 3px solid #2980b9;
+}
+
+header .container {
+    /* And adding Flexbox to the container for better spacing and alignment */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 15px; /* This padding adds the spacing *inside* the header */
+}
+
+header .logo {
+    /* No float needed anymore with Flexbox */
+    margin: 0;
+    padding: 0;
+    font-size: 1.8rem;
+}
+
+header nav {
+    /* No float needed anymore with Flexbox */
+    margin-top: 0;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: #ecf0f1;
+}
+
+/* Hero Section */
+.hero {
+    background: #3498db url('https://via.placeholder.com/1500x500/3498db/ffffff?text=Recruiting+Agency+Hero') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    height: 400px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #e74c3c;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #c0392b;
+}
+
+/* Section Styling (General) */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section:nth-of-type(odd) {
+    background-color: #fff;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+/* About Us Section */
+.about-us p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    font-size: 1.1rem;
+}
+
+/* Services Section */
+.services .service-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.services .service-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.services .service-item:hover {
+    transform: translateY(-5px);
+}
+
+.services .service-item h3 {
+    color: #3498db;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Job Listings Section */
+.job-listings .job-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.job-listings .job-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.job-listings .job-item:hover {
+    transform: translateY(-5px);
+}
+
+.job-listings .job-item h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.job-listings .job-item p {
+    margin-bottom: 10px;
+}
+
+.job-listings .apply-btn {
+    display: inline-block;
+    background: #2ecc71;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.job-listings .apply-btn:hover {
+    background: #27ae60;
+}
+
+/* Contact Us Section */
+.contact-form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #3498db;
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #2980b9;
+}
+
+/* Footer Styles */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    header .logo {
+        padding-bottom: 1rem;
+    }
+    header nav ul {
+        padding-top: 10px;
+    }
+    header li {
+        display: block;
+        margin: 10px 0;
+    }
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+    .services .service-grid,
+    .job-listings .job-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services .service-item,
+    .job-listings .job-item {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 0;
+        height: auto;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+}
